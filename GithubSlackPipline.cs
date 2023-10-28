@@ -16,7 +16,7 @@ namespace AssigmentDataBase
         {
             _logger = loggerFactory.CreateLogger<GithubSlackPipline>();
         }
-        //new
+        //new test
         [Function("GithubSlackPipline")]
         public async Task<HttpResponseData> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req,
