@@ -16,7 +16,8 @@ namespace AssigmentDataBase
         {
             _logger = loggerFactory.CreateLogger<GithubSlackPipline>();
         }
-        //new test
+       
+
         [Function("GithubSlackPipline")]
         public async Task<HttpResponseData> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req,
@@ -38,7 +39,7 @@ namespace AssigmentDataBase
                 var response = req.CreateResponse(HttpStatusCode.OK);
                 response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
                 response.WriteString(messageToSlack);
-                //tEST tEST
+                
                 return response;
             }
             else
@@ -57,7 +58,7 @@ namespace AssigmentDataBase
         {
             try
             {
-                var urlWebhook = "https://hooks.slack.com/services/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";
+                var urlWebhook = "https://hooks.slack.com/services/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";
 
                 using (var client = new HttpClient())
                 {
